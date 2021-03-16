@@ -1,4 +1,5 @@
 #hero {
+  position: relative;
   min-height: 100vh;
   height: 100vh;
   display: flex;
@@ -16,7 +17,7 @@
   right: 0;
 
 
-  // If you want to set a background image on the hero section, uncomment these with yout custom image
+  // If you want to set a background image on the hero section, uncomment these with your custom image
 
   /* background: url("/src/assets/[your-image].png");
   background-position: center;
@@ -26,16 +27,18 @@
     padding: 0rem $default-font-size;
   }
 
+  // .wave-div {
+  //   position: absolute;
+  //   bottom: 0;
+  // }
+
   .about-wave {
     position: absolute;
     left: 0;
     right: 0;
     width: 100%;
-    bottom: 0;
+    bottom: 0vh;
 
-    // @include respond(phone) {
-    //   bottom:-5vh;
-    // }
   }
 
   .hero-title {
