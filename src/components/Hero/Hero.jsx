@@ -2,7 +2,15 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
+import Loadable from 'react-loadable';
 import PortfolioContext from '../../context/context';
+// import Goo from '../Goo/Goo'
+import Loading from '../Loading/Loading';
+
+const LoadableComponent = Loadable({
+  loader: () => import('../Goo/Goo'),
+  loading: Loading,
+});
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
@@ -23,6 +31,8 @@ const Header = () => {
 
   return (
     <section id="hero" className="jumbotron">
+      <LoadableComponent />
+      {/* <Goo/> */}
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
@@ -42,6 +52,13 @@ const Header = () => {
           </p>
         </Fade>
       </Container>
+      {/* eslint-disable global-require */}
+      <img
+        alt="small wave with a green, teal, and blue gradient."
+        className="about-wave"
+        src={require('../../images/wave.png')}
+      />
+      {/* eslint-enable global-require */}
     </section>
   );
 };

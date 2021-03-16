@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   border-bottom: 0px;
+  // background: $white-color;
   background: $white-color;
   font-weight: 400;
   color: $dark-blue-text;
@@ -13,7 +14,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1;
+
 
   // If you want to set a background image on the hero section, uncomment these with yout custom image
 
@@ -25,11 +26,20 @@
     padding: 0rem $default-font-size;
   }
 
+  .about-wave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+  }
+
   .hero-title {
     font-size: 5.6rem;
     font-weight: 700;
     margin-bottom: 3.2rem;
     text-align: left;
+    z-index: 0;
 
     @include respond(tab-land) {
       font-size: 4rem;
