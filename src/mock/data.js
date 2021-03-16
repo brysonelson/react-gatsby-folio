@@ -24,7 +24,7 @@ export const aboutData = {
     "I have had the opportunity to travel the world and am extremely passionate about culture and diversity. I've been lucky enough to pick up Danish, Spanish, and Portuguese along the way.",
   paragraphThree:
     "Along the way, I've found that diversity really fuels software development in many ways. The inclusion of ideas and experiences of a variety of people can help bring about different ways of tackling problems. The collaboration of ideas, opinions, and knowledge is one of my favorite parts of building software.",
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  // resume: '../images/brysonNelsonResumePDF.pdf', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
