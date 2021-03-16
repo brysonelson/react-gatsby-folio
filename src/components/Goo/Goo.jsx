@@ -1,16 +1,22 @@
 import React from 'react';
 import { useTrail, animated } from 'react-spring';
 import PropTypes from 'prop-types';
+// import './ChromeStyles.css'
+import './styles.css';
 
 const browser = navigator.userAgent.toLowerCase().indexOf('chrome') > -1 ? 'chrome' : 'other';
-
+let isChrome = true;
 /* eslint-disable global-require */
 
 if (browser === 'chrome') {
-  require('./ChromeStyles.css');
+  // require('./ChromeStyles.css');
+  isChrome = true;
 } else {
   // require('./styles.css');
+  isChrome = false;
 }
+
+console.log(isChrome);
 
 /* eslint-enable global-require */
 
@@ -25,7 +31,11 @@ export default function Goo() {
 
   return (
     <>
-      <div native className="hooks-main-2" onMouseMove={(e) => set({ xy: [e.clientX, e.clientY] })}>
+      <div
+        native
+        className={isChrome ? 'hooks-main-2-chrome' : 'hooks-main-2'}
+        onMouseMove={(e) => set({ xy: [e.clientX, e.clientY] })}
+      >
         {trail.map((props, index) => (
           <animated.div
             className={`cir2${index}`}
@@ -40,7 +50,11 @@ export default function Goo() {
           <feColorMatrix in="blur" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -7" />
         </filter>
       </svg>
-      <div native className="hooks-main" onMouseMove={(e) => set({ xy: [e.clientX, e.clientY] })}>
+      <div
+        native
+        className={isChrome ? 'hooks-main-chrome' : 'hooks-main'}
+        onMouseMove={(e) => set({ xy: [e.clientX, e.clientY] })}
+      >
         {trail.map((props, index) => (
           <animated.div key={index} style={{ transform: props.xy.interpolate(trans) }} />
         ))}
