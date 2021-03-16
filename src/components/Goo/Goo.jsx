@@ -9,7 +9,7 @@ const browser = navigator.userAgent.toLowerCase().indexOf('chrome') > -1 ? 'chro
 if (browser === 'chrome') {
   require('./ChromeStyles.css');
 } else {
-  require('./styles.css');
+  // require('./styles.css');
 }
 
 /* eslint-enable global-require */
