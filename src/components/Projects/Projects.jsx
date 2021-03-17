@@ -2,12 +2,15 @@ import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
-const Projects = () => {
+const Projects = (props) => {
   const { projects } = useContext(PortfolioContext);
+
+  const { theme } = props;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -23,7 +26,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects">
+    <section id="projects" style={theme}>
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
@@ -114,6 +117,10 @@ const Projects = () => {
       </Container>
     </section>
   );
+};
+
+Projects.propTypes = {
+  theme: PropTypes.node,
 };
 
 export default Projects;

@@ -15,6 +15,7 @@ export default () => {
         <title>{title || 'Gatsby Simplefolio'}</title>
         <html lang={lang || 'en'} />
         <meta name="description" content={description || 'Gatsby Simplefolio'} />
+        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"> </script>
       </Helmet>
       <App />
     </>

@@ -1,0 +1,99 @@
+// .toggle-checkbox {
+//     position: fixed;
+//     bottom: 0;
+//     right: 0;
+// }
+.toggle-container {
+    position: fixed;
+    right: 2.5vh;
+    z-index: 10;
+    bottom: 1vh;
+}
+      
+  .toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .toggle-slot {
+    position: relative;
+    height: 4.5vh;
+    width: 8vh;
+    border: 2px solid #374151;
+    border-radius: 5vh;
+    background-color: white;
+    // box-shadow: 0px 10px 25px #e4e7ec;
+    transition: background-color 250ms;
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot {
+    background-color: #374151;
+    border: 2px solid #e4e7ec;
+  }
+  
+  .toggle-button {
+    transform: translate(4.2vh, 0.45vh);
+    position: absolute;
+    height: 3.0vh;
+    width: 3.0vh;
+    border-radius: 50%;
+    background-color: #b9c0cc;
+    box-shadow: inset 0px 0px 0px 0.28vh #374151;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #5e687a;
+    box-shadow: inset 0px 0px 0px 0.28vh white;
+    transform: translate(0.4vh, 0.5vh);
+  }
+  
+  .sun-icon {
+    position: absolute;
+    height: 3vh;
+    width: 3vh;
+    color: #374151;
+  }
+  
+  .sun-icon-wrapper {
+    position: absolute;
+    height: 3vh;
+    width: 3vh;
+    opacity: 1;
+    transform: translate(-1vh, 0.1vh) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(1.5vh, 1vh) rotate(0deg);
+  }
+  
+  .moon-icon {
+    position: absolute;
+    height: 3vh;
+    width: 3vh;
+    color: white;
+  }
+  
+  .moon-icon-wrapper {
+    position: absolute;
+    height: 3vh;
+    width: 3vh;
+    opacity: 0;
+    transform: translate(.8vh, .9vh) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(2.8vh, .9vh) rotate(-15deg);
+  }
+
+
+

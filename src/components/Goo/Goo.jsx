@@ -30,7 +30,6 @@ export default function Goo() {
   return (
     <>
       <div
-        native
         className={isChrome ? 'hooks-main-2-chrome' : 'hooks-main-2'}
         onMouseMove={(e) => set({ xy: [e.clientX, e.clientY] })}
       >
@@ -52,7 +51,6 @@ export default function Goo() {
         </filter>
       </svg>
       <div
-        native
         className={isChrome ? 'hooks-main-chrome' : 'hooks-main'}
         onMouseMove={(e) => set({ xy: [e.clientX, e.clientY] })}
       >

@@ -44,7 +44,7 @@ export const projectsData = [
     img: 'koolskool.png',
     title: 'Kool Skool Tool',
     info:
-      'Kool Skool Tool is an attempt to simplify school attendance taking. We wanted to create a simple way for teachers to track their students. We have logins for Admins, Teachers and Parents. Admins have to ability to send a mass alert text via Twilio to all parents in the event of a school emergency. In order to see the app, login with the test credentials: peter@koolskooltool.com and the password is six zeros numerically',
+      'Kool Skool Tool is an attempt to simplify school attendance taking, allowing teachers to track their students. We have logins for Admins, Teachers and Parents. Admins have the ability to send a mass text via Twilio to all parents in the event of a school emergency. Login with the test credentials: peter@koolskooltool.com and the password is six zeros numerically',
     info2: '',
     url: 'https://kool-skool-tool-11235.herokuapp.com/login',
     repo: 'https://github.com/brysonelson/KoolSkool', // if no repo, the button will not show up

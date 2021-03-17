@@ -3,8 +3,8 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import Loadable from 'react-loadable';
+import PropTypes from 'prop-types';
 import PortfolioContext from '../../context/context';
-// import Goo from '../Goo/Goo'
 import Loading from '../Loading/Loading';
 
 const LoadableComponent = Loadable({
@@ -12,9 +12,11 @@ const LoadableComponent = Loadable({
   loading: Loading,
 });
 
-const Header = () => {
+const Header = (props) => {
   const { hero } = useContext(PortfolioContext);
   const { title, name, subtitle, cta } = hero;
+
+  const { theme } = props;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -30,7 +32,7 @@ const Header = () => {
   }, []);
 
   return (
-    <section id="hero" className="jumbotron">
+    <section id="hero" className="jumbotron" style={theme}>
       {/* eslint-disable global-require */}
       <img alt="site logo" className="logo" src={require('../../images/favicon.png')} />
       {/* eslint-enable global-require */}
@@ -64,6 +66,10 @@ const Header = () => {
       {/* eslint-enable global-require */}
     </section>
   );
+};
+
+Header.propTypes = {
+  theme: PropTypes.node,
 };
 
 export default Header;
