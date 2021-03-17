@@ -16,8 +16,6 @@ if (browser === 'chrome') {
   isChrome = false;
 }
 
-console.log(isChrome);
-
 /* eslint-enable global-require */
 
 /* eslint-disable react/no-array-index-key */
@@ -48,6 +46,9 @@ export default function Goo() {
         <filter id="goo">
           <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="30" />
           <feColorMatrix in="blur" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -7" />
+          <feComponentTransfer>
+            <feFuncA type="discrete" tableValues="0 1" />
+          </feComponentTransfer>
         </filter>
       </svg>
       <div

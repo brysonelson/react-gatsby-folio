@@ -31,6 +31,9 @@ const Header = () => {
 
   return (
     <section id="hero" className="jumbotron">
+      {/* eslint-disable global-require */}
+      <img alt="site logo" className="logo" src={require('../../images/favicon.png')} />
+      {/* eslint-enable global-require */}
       <LoadableComponent />
       {/* <Goo/> */}
       <Container>
