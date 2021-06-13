@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import Hero from './Hero/Hero';
 import DarkMode from './DarkMode/DarkMode';
 import About from './About/About';
@@ -24,6 +25,9 @@ const lightStyles = {
 };
 
 function App() {
+  ReactGA.initialize('UA-136219192-1');
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
