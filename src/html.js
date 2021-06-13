@@ -4,6 +4,10 @@
 /* eslint-disable jsx-a11y/html-has-lang */
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-136219192-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default function HTML({
   htmlAttributes,
