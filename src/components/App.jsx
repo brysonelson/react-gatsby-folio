@@ -25,15 +25,17 @@ const lightStyles = {
 };
 
 function App() {
-  ReactGA.initialize('UA-136219192-1');
-  ReactGA.pageview(window.location.pathname + window.location.search);
-
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
   const [darkTheme, setDark] = useState({ dark: false, styles: lightStyles });
+
+  useEffect(() => {
+    ReactGA.initialize('UA-136219192-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   useEffect(() => {
     setHero({ ...heroData });
