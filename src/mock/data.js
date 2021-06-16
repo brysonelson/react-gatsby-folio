@@ -19,7 +19,7 @@ export const heroData = {
 export const aboutData = {
   img: 'aboutproile.jpg',
   paragraphOne:
-    "I've always loved problem solving and puzzle. Development at its core is just breaking a problem down into its smallest components, and then figuring out how to make it all work together.",
+    "I've always loved problem solving and puzzles. Development at its core is just breaking a problem down into its smallest components, and then figuring out how to make it all work together.",
   paragraphTwo:
     "I have had the opportunity to travel the world and am extremely passionate about culture and diversity. I've been lucky enough to pick up Danish, Spanish, and Portuguese along the way.",
   paragraphThree:
